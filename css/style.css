@@ -231,7 +231,7 @@ Header
 */
 
 header.homepage {
-	margin: 0px 0px 0px -70px;
+	margin: 0px 0px 0px -30px;
 	padding: 48px 0px 70px;
 }
 header {
@@ -1635,7 +1635,7 @@ footer .social .cont_item figure {
 }
 footer .navigate li {
 	float: left;
-	width: 50%;
+	width: 70%;
 }
 footer .navigate a:hover {
 	color: #f5d12f;

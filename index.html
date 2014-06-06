@@ -1,7 +1,16 @@
-﻿<!DOCTYPE html>
+﻿<?php
+
+define('INCLUDE_CHECK',true);
+
+require 'connect.php';
+require 'functions.php';
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home | Tradecast</title>
+<title>Home | Policyoracle</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
@@ -28,51 +37,32 @@
   <div class="container_12"> 
     <!--==============================header=================================-->
     <header class="homepage">
-      <h1><a class="logo" href="index.html"><span class="underline">Trade</span>cast</a></h1>
+      <h1><a class="logo" href="index.html"><span class="underline">Policy</span>oracle</a></h1>
       <nav>
         <ul class="sf-menu">
           <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="propose.html">Propose a question</a></li>
-          <li><a href="browse.html">Browse Forecasts</a></li>
+          <!-- <li><a href="propose.html">Propose a question</a></li> -->
+          <li><a href="javascript:">Browse Forecasts</a>
+            <ul>
+              <li><a href="browse-economics.html">Economics </a></li>
+              <li><a href="browse-politics.html">Politics</a></li>
+              <li><a href="browse-environment.html">Environment</a></li>
+            </ul>
+          </li>
           <li><a href="javascript:">Learn to trade</a>
             <ul>
-              <li><a href="project-threecol.html">How Works </a></li>
-              <li><a href="project-fourcol.html">Trader Manual</a></li>
+              <li><a href="how-works.html">How Works </a></li>
+              <li><a href="trader-manual.html">Trader Manual</a></li>
               <!-- <li><a href="project-details.html">Project Details</a></li> -->
             </ul>
           </li>
-          <!-- Pages
-          <li> <a href="javascript:">Pages</a>
-            <ul>
-              <li><a href="javascript:">Home</a>
-                <ul>
-                  <li><a href="index.html">With Slider</a></li>
-                  <li><a href="index2.html">Second Slider</a></li>
-                  <li><a href="index3.html">Without Slider</a></li>
-                </ul>
-              </li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="javascript:">Pricing</a>
-                <ul>
-                  <li><a href="pricing-threecol.html">Three Cols</a></li>
-                  <li><a href="pricing-fourcol.html">Four Cols</a></li>
-                </ul>
-              </li>
-              <li><a href="components.html">Components</a></li>
-              <li><a href="404.html">404</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-            </ul>
-          </li> -->
           <li><a href="javascript:">Get started</a>
             <ul>
-              <li><a href="blog.html">sign in</a></li>
-              <li><a href="blog-single.html">Create account</a></li>
-              <li><a href="blog-single.html">FAQ</a></li>
-              <li><a href="blog-single.html">Contact us</a></li>
+              <li><a href="sign-in.html">sign in</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact us</a></li>
             </ul>
           </li> 
-          <!-- Contact
-          <li><a href="contact.html">Contact</a></li>-->
         </ul>
       </nav>
       <div class="clear"></div>
@@ -88,11 +78,11 @@
           <!-- FADE -->
           <li data-transition="fade">
           
-            <img src="images/main.jpg" alt="">
-            <div class="caption lft" data-x="700" data-y="70" data-speed="900" data-start="900" data-easing="easeOutExpo"><img src="images/carousel/euro.png" alt="" width="256" /></div> 
-            <div class="caption lft" data-x="500" data-y="70" data-speed="200" data-start="900" data-easing="easeOutExpo"><img src="images/carousel/dollar.png" alt="" width="256" /></div> 
+            <img src="images/carousel/blackboard.png" alt="">
+            <div class="caption lft" data-x="700" data-y="200" data-speed="900" data-start="900" data-easing="easeOutExpo"><img src="images/carousel/euro.png" alt="" width="200" /></div> 
+            <div class="caption lft" data-x="900" data-y="50" data-speed="200" data-start="900" data-easing="easeOutExpo"><img src="images/carousel/dollar.png" alt="" width="100" /></div> 
             
-            <div class="caption sfl big_red_bg" data-x="10" data-y="40" data-speed="600" data-start="2000" data-easing="easeOutExpo">Buy / Sell trades for</div>
+            <div class="caption sfl big_red_bg" data-x="10" data-y="40" data-speed="600" data-start="2000" data-easing="easeOutExpo">Make Predictions On</div>
             <div class="caption sfl big_blue_bg" data-x="10" data-y="170" data-speed="600" data-start="2500" data-easing="easeOutExpo">
              Economics
             </div>
@@ -102,7 +92,7 @@
             </div>
             
             <div class="caption sfl big_blue_bg" data-x="10" data-y="310" data-speed="600" data-start="2900" data-easing="easeOutExpo">
-              Techology
+              Environment
             </div>
             
           </li>
@@ -112,20 +102,20 @@
            <div class="caption lft" data-x="700" data-y="60" data-speed="900" data-start="900" data-easing="easeOutExpo"><img src="images/responsive.png" alt="" width="256" /></div>
             <div class="caption lfr big_yellow_bg" data-x="10" data-y="50" data-speed="300" data-start="1600" data-easing="easeOutExpo">Join</div>
             <div class="caption sfl small_black_bg" data-x="10" data-y="200" data-speed="300" data-start="1800" data-easing="easeOutExpo">The Most Innovative Prediction Market</div>
-            <div class="caption sfr small_black_bg" data-x="10" data-y="250" data-speed="300" data-start="2000" data-easing="easeOutExpo">Sign Up Easily & Make Your Predictions</div>
-            <!-- <div class="caption sfl small_black_bg" data-x="10" data-y="300" data-speed="300" data-start="2200" data-easing="easeOutExpo">Well Commented & Documented</div> -->
+            <div class="caption sfr small_black_bg" data-x="10" data-y="250" data-speed="300" data-start="2000" data-easing="easeOutExpo">Where The Right Answers Pay Back</div>
+            <div class="caption sfl small_black_bg" data-x="10" data-y="300" data-speed="300" data-start="2200" data-easing="easeOutExpo">Sign Up Easily & Make Your Predictions</div> 
           
           </li>
           
           <!-- SLIDERIGHT -->
-          <li data-transition="slideleft"> <img src="images/img3.jpg" alt="" />
+          <li data-transition="slideleft"> <img src="images/carousel/night.jpg" alt="" />
             <div class="caption lft boxshadow" data-x="10" data-y="50" data-speed="900" data-start="1300" data-easing="easeOutExpo">
              
               <iframe width="560" height="315" src="//www.youtube.com/embed/XB0CORT1k9w" frameborder="0" allowfullscreen></iframe>
               
             </div>
             <div class="caption lfr big_black_bg" data-x="700" data-y="50" data-speed="300" data-start="1600" data-easing="easeOutExpo">Video Tutorials</div>
-            <div class="caption lfb small_black_bg" data-x="700" data-y="130" data-speed="300" data-start="1800" data-easing="easeOutExpo">Use your training videos <br/>in the banner to get user notice</div>
+            <div class="caption lfb small_black_bg" data-x="700" data-y="130" data-speed="300" data-start="1800" data-easing="easeOutExpo">Use your training videos <br/>and start world events predictions</div>
             
             
             <div class="caption lfb" data-x="700" data-y="210" data-speed="300" data-start="1800" data-easing="easeOutExpo"><a href="#" class="button large">Watch Video Training Now</a></div>
@@ -137,13 +127,13 @@
           
           
           <!-- SLIDEUP -->
-          <li data-transition="fade"> <img src="images/carousel/night.jpg" alt="" />
+          <li data-transition="fade"> <img src="images/img4.jpg" alt="" />
             <div class="caption lft" data-x="520" data-y="20" data-speed="900" data-start="500" data-easing="easeOutBack"><img src="images/carousel/small.png" alt="" /></div>
             <div class="caption lfb big_red_bg" data-x="0" data-y="50" data-speed="900" data-start="800" data-easing="easeOutSine">Secured Trading</div>
             
             <div class="caption lfb big_red_bg" data-x="0" data-y="150" data-speed="1100" data-start="1000" data-easing="easeOutSine">High Anonymity</div>
             
-            <!-- <div class="caption lfb big_red_bg" data-x="0" data-y="250" data-speed="1100" data-start="1200" data-easing="easeOutSine">Valid Markup</div> -->
+            <div class="caption lfb big_red_bg" data-x="0" data-y="250" data-speed="1100" data-start="1200" data-easing="easeOutSine">Fun Like Game</div> 
           </li>
         </ul>
        
@@ -163,46 +153,48 @@
       <div class="wrapper offers_box">
         <article class="grid_3">
           <h2 class="clearfix"> <span class="f_left">How Tradecast Work</span> <a id="next" class="next"></a> <a id="prev" class="prev"></a> </h2>
-          <p> We deliver outstanding user experiences through designing and realizing digital solutions. <a href="project-fourcol.html" class="arrowlink">Our Portfolio</a> </p>
+          <p>  Tradecast is based on the idea that the collective wisdom of an informed and diverse group is often more accurate at forecasting the outcome of events than that of one individual expert. 
+            <!-- <a href="project-fourcol.html" class="arrowlink">Our Portfolio</a> -->
+          </p>
         </article>
         <div class="grid_9">
           <div id="home-services">
             <div class="grid_3">
-              <div class="offer"> <img src="images/plan.png" alt="Plan">
-                <div class="title">Plan</div>
-                Lorem ipsum dolor sit amet, consect etur adip scing elit. Vestibulum ut tortor urnati dunt dolor. Nunc vulputate ultrices con sect etur donec semper lacinia ultricies.<br>
+              <div class="offer"> <img src="images/register.png" alt="Register">
+                <div class="title">Register</div>
+                Think You know Economics, Politics and Sports? Register today for FREE and we'll set you up with $. The rest is up to you.<br>
               </div>
             </div>
             <div class="grid_3">
-              <div class="offer"> <img src="images/design.png" alt="Design">
-                <div class="title">Design</div>
-                Lorem ipsum dolor sit amet, consect etur adip scing elit. Vestibulum ut tortor urnati dunt dolor. Nunc vulputate ultrices con sect etur donec semper lacinia ultricies.<br>
+              <div class="offer"> <img src="images/predict.png" alt="Predict">
+                <div class="title">Predict</div>
+                Navigate in running predictions and make known your forecast about a future event which interests you.<br>
               </div>
             </div>
             <div class="grid_3 last-col">
-              <div class="offer"> <img src="images/prototype.png" alt="Prototype">
-                <div class="title">Prototype</div>
-                Lorem ipsum dolor sit amet, consect etur adip scing elit. Vestibulum ut tortor urnati dunt dolor. Nunc vulputate ultrices con sect etur donec semper lacinia ultricies.<br>
+              <div class="offer"> <img src="images/update.png" alt="Update">
+                <div class="title">Update</div>
+                Get informed and update your predictions whenever you want. The goal is to win!<br>
               </div>
             </div>
             <div class="grid_3 ">
-              <div class="offer"> <img src="images/development.png" alt="Development">
-                <div class="title">Development</div>
-                Lorem ipsum dolor sit amet, consect etur adip scing elit. Vestibulum ut tortor urnati dunt dolor. Nunc vulputate ultrices con sect etur donec semper lacinia ultricies.<br>
+              <div class="offer"> <img src="images/awards.png" alt="Awards">
+                <div class="title">Check Results</div>
+                After the answer to an event is known and made public, participants who answered correctly will be be rewarded and move up on our leaderboard. The more correct forecasts a participant makes, the more influence they’ll have in other forecasts.<br>
               </div>
             </div>
-            <div class="grid_3 ">
+            <!--<div class="grid_3 ">
               <div class="offer"> <img src="images/testing.png" alt="Testing">
                 <div class="title">Testing</div>
                 Lorem ipsum dolor sit amet, consect etur adip scing elit. Vestibulum ut tortor urnati dunt dolor. Nunc vulputate ultrices con sect etur donec semper lacinia ultricies.<br>
               </div>
-            </div>
+            </div> 
             <div class="grid_3 last-col ">
               <div class="offer"> <img src="images/delivery.png" alt="Delivery">
                 <div class="title">Delivery</div>
                 Lorem ipsum dolor sit amet, consect etur adip scing elit. Vestibulum ut tortor urnati dunt dolor. Nunc vulputate ultrices con sect etur donec semper lacinia ultricies.<br>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -214,9 +206,11 @@
     <section class="content">
       <div class="wrapper featured_work">
         <article class="grid_3">
-          <h2>Featured Project</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-          <a href="project-details.html" class="arrowlink">Details</a>&nbsp; <a href="contact.html" class="arrowlink">Contact Us</a> </article>
+          <h2>Latest Contracts</h2>
+          <p>Bla bla bla </p>
+          <a href="project-details.html" class="arrowlink">Details</a>&nbsp; 
+          <!-- <a href="contact.html" class="arrowlink">Contact Us</a> -->
+           </article>
         <article class="grid_9 last">
           <div class="flexslider" id="home-page-slider-secondary">
             <ul class="slides">
@@ -245,31 +239,31 @@
       <div class="wrapper">
         <article class="grid_3">
           <h2>Impressed?<br/>
-            want to hire us?</h2>
-          <p class="MB0"> Send us your details and we'll get in touch withtin 24 hours. </p>
-        </article>
+            want to sign in?</h2>
+          <p class="MB0"> Register to become a Policyoracle forecaster.</p>
+        </article><!-- grid_3 -->
         <article class="grid_9">
           <form action="#" method="post" id="cform" name="cform" class="clearfix">
             <ul id="homehireus" class="hireform">
               <li>
-                <label>Name:<span class="required">*</span></label>
-                <input name="name" id="name" type="text" value="" tabindex="1">
+                <label>Username:<span class="required">*</span></label>
+                <input name="username" id="username" type="text" value="" tabindex="1">
               </li>
               <li>
-                <label>Phone:</label>
-                <input name="phone" id="phone" type="text" value="" tabindex="3">
+                <label>Password:<span class="required">*</span></label>
+                <input name="password" id="password" type="text" value="" tabindex="3">
               </li>
               <li>
                 <label>Email:<span class="required">*</span></label>
                 <input name="email" id="email" type="text" value="" tabindex="2">
               </li>
               <li>
-                <input type="button" id="send-message" value="Send Details To Wee" tabindex="4">
+                <input type="button" id="send-message" value="Submit" tabindex="4">
               </li>
             </ul>
           </form>
           <div id="output"></div>
-        </article>
+        </article><!-- grid_9 -->
       </div>
     </section>
   </div>
@@ -281,39 +275,39 @@
       <div class="wrapper">
         <div class="grid_6">
           <h2>About</h2>
-          <p>Hi, we are Wee - a creative agency! 
-            Wee emphasizes clean displays of content while facilitating great user experiences.</p>
+          <p>The Tradecast is operated by faculty at the National University of Athens <a href="http://imu.ntua.gr/" target="blank"> Information Management Unit</a> as part of our research mission.</p>
           <ul class="social">
-            <li> <a href="#">
+            <li> <a href="https://twitter.com/imu_ntua">
               <figure><img src="images/soc1.png" width="31" height="24" alt=""></figure>
               Follow us on Twitter</a> </li>
-            <li> <a href="#">
+            <li> <a href="https://www.facebook.com/pages/ICCS-IMU/108487335848174">
               <figure><img src="images/soc2.png" width="31" height="26" alt=""></figure>
               Join us on Facebook</a> </li>
-            <li> <a href="#">
+            <li> <a href="http://imu.ntua.gr/news">
               <figure><img src="images/soc3.png" width="31" height="26" alt=""></figure>
-              Subscribe to our blog</a> </li>
-            <li class="cont_item m_bottom_zero"> <a href="index-5.html">
+              Subscribe to our site</a> </li>
+            <li class="cont_item m_bottom_zero"> <a href="contact.html">
               <figure><img src="images/soc4.png" width="31" height="20" alt=""></figure>
               Contact Us</a> </li>
           </ul>
-        </div>
+        </div><!-- grid_6 -->
         <div class="grid_3">
-          <h2>Copyright</h2>
-          This includes all content and original design work, including the distinctive typographic style, layout and composition of this website. </div>
+          <h2>Copyleft</h2>
+          All lefts reserved. 
+        </div><!-- grid_3 -->
         <div class="grid_3 last-col">
           <h2>Navigate</h2>
           <ul class="navigate">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Components</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <!-- <li><a href="propose.html">Propose A Question</a></li> -->
+            <li><a href="browse.html">Browse Forecasts</a></li>
+            <li><a href="learn.html">Learn To Trade</a></li>
+            <li><a href="get-started.html">Get Started</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
-        </div>
-      </div>
+        </div><!-- grid_3 last-col -->
+      </div><!-- wrapper -->
     </footer>
   </div>
 </div>
